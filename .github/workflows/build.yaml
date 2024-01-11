@@ -19,7 +19,7 @@ jobs:
         with:
           images: improwised/jre-ghar-image
           tags: |
-            type=raw,value={{branch}}-{{sha}}-{{date 'X'}}
+            type=raw,value={{github.ref_name}}-{{sha}}-{{date 'X'}}
             type=raw,value=latest
         timeout-minutes: 1
       - name: Set up Docker Buildx
